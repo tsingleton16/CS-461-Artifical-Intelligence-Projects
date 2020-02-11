@@ -1,0 +1,46 @@
+For this assignment, you'll be using a small (for real-world data) data set
+to analyze astrophysics data.
+
+Pulsars are a rare type of neutron star that produce pulses (thus the
+name) of electromagnetic radiation in a regular cycle. However, there are
+many other things that also produce pulses of radiation, and many
+astronomical objects that appear to be candidate pulsars are in fact
+something else (false positives). Most of these are because of radio
+frequency interference (RFI) or noise.
+
+Because the pulses vary slightly from one cycle to another, a candidate is
+observed for an extended period and the data from it is statistically
+profiled. Your data file contains information on 17,898 candidates, of
+which 1,639 are pulsars. Each row lists 8 variables, statistical summaries
+of the data from the star, and 1 outcome variable, the class (0 = RFI, 1 =
+pulsar). Your task is to use TensorFlow to construct a neural network to
+analyze this data.
+
+All input data is numeric, floating point, and does not need to be
+rescaled or recoded. (You're welcome.) Use a 70/15/15 split for the
+training, test, and validation sets. You should be able to achieve a fairly
+high level of classification with a fairly simple network; you will probably
+need no more than 2 hidden layers. But experiment and see what
+works. 1/2
+
+Write up a short report discussing:
+The configuration of your network, along with a brief overview of
+your code
+
+Your cross-validation strategy
+Summarize your results
+Any further questions you'd like to discuss, ideas for extending this
+further, etc.
+
+Submit your report and your source code by the deadline.
+Data dictionary:
+1. Mean of the integrated profile.
+2. Standard deviation of the integrated profile.
+3. Excess kurtosis of the integrated profile.
+4. Skewness of the integrated profile.
+5. Mean of the DM-SNR curve.
+6. Standard deviation of the DM-SNR curve.
+7. Excess kurtosis of the DM-SNR curve.
+8. Skewness of the DM-SNR curve.
+9. Class
+This data came from https://www.kaggle.com/pavanraj159/predicting-apulsar-star
